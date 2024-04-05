@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coterie</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: cyan;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+    }
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+    }
+    .button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    .signin {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .signin:hover {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="logo" src="your_logo.png" alt="Coteriee Logo">
+
+  <button class="signin">Sign In</button>
+
+  <div class="container">
+    <div class="buttons-container">
+      <button class="button" onclick="window.location.href='browse.html'">Browse Posts</button>
+      <button class="button" onclick="window.location.href='makepost.html'">Make a Post</button>
+    </div>
+  </div>
+
+</body>
+</html>
