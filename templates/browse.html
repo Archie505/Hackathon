@@ -1,70 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Browse Posts{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browse Posts - Coterie</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: maroon;
-    }
-    .container {
-      padding: 20px;
-    }
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 100px;
-    }
-    .posts-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-    .post {
-      background-color: #FF9900;
-      margin: 10px;
-      padding: 20px;
-      border-radius: 10px;
-      width: 80%;
-      color: white;
-    }
-    .signin {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #FF9900;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .signin:hover {
-      background-color: yellow;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Posts</title>
+    <style>
+        /* Adjustments to match the format of the rest of the webpage */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .button {
+            margin: 20px;
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: #FF9900;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
-
-  <img class="logo" src="your_logo.png" alt="Coterie Logo">
-
-  <button class="signin">Sign In</button>
-
-  <div class="container">
-    <h1 style="color: white;">Browse Posts</h1>
-    <div class="posts-container">
-      <!-- Dynamic posts go here -->
-      <div class="post">Post 1 Content</div>
-      <div class="post">Post 2 Content</div>
-      <!-- Add more posts as needed -->
+    <div class="buttons-container">
+        <button class="button" onclick="window.location.href='/browse/travel'">Travel</button>
+        <button class="button" onclick="window.location.href='/browse/tutoring'">Tutoring</button>
+        <button class="button" onclick="window.location.href='/browse/creatives'">Creatives</button>
+        <button class="button" onclick="window.location.href='/browse/other_services'">Other Services</button>
     </div>
-  </div>
-
 </body>
 </html>
+{% endblock %}
