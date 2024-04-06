@@ -11,12 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #ffecd1;
-        }
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            background-color: #ffecd1; 
         }
         .logo img {
             width: 100px; /* Adjust the width as needed */
@@ -26,11 +21,21 @@
             padding: 20px;
             margin-top: 100px; /* Adjust based on the logo's height to prevent overlap */
         }
+        .navbar-nav {
+            justify-content: flex-end; /* Move the navbar items to the right */
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Nabar</a>
+        <a class="navbar-brand" href="#">
+          <span class="text-white">Navbar</span>
+        </a>
+    
+        <a class="navbar-brand" href="#">
+            <!-- Make sure to replace 'your_logo.png' with the correct path to your logo in the static folder -->
+            <img src="{{ url_for('static', filename='your_logo.png') }}" alt="Your Logo" class="logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -62,10 +67,6 @@
           </form>
         </div>
       </nav>
-    <div class="logo">
-        <!-- Make sure to replace 'your_logo.png' with the correct path to your logo in the static folder -->
-        <img src="{{ url_for('static', filename='your_logo.png') }}" alt="Your Logo">
-    </div>
     <div class="content">
         <!-- The content block can be overridden by child templates -->
         {% block content %}
