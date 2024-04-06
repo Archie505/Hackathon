@@ -61,14 +61,14 @@
 </head>
 <body>
 
-  <img class="logo" src="your_logo.png" alt="Coteriee Logo">
+  <img class="logo" src="{{ url_for('static', filename='your_logo.png') }}" alt="Your Logo">
 
   <button class="signin">Sign In</button>
 
   <div class="container">
     <div class="buttons-container">
-      <button class="button" onclick="window.location.href='browse.html'">Browse <br> Posts</button>
-      <button class="button" onclick="window.location.href='base.html'">Base Page</button>
+      <button class="button" onclick="window.location.href='/base'">Base Posts</button>
+      <button class="button" onclick="window.location.href='/browse'">Browse Posts</button>
     </div>
   </div>
 
