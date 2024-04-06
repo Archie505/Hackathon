@@ -22,6 +22,10 @@ def browse_tutoring():
 def browse_creatives():
     return render_template("browse_creatives.html")
 
+@app.route("/browse/rental")
+def browse_rental():
+    return render_template("browse_rental.html")
+
 @app.route("/browse/other_services")
 def browse_other_services():
     return render_template("browse_other_services.html")

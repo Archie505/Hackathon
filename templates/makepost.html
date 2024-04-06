@@ -24,7 +24,14 @@
             margin-bottom: 20px;
         }
 
-        .post-input {
+        .job-description-input {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .cost-input {
             width: 50%;
             padding: 10px;
             font-size: 16px;
@@ -56,14 +63,15 @@
 </head>
 <body>
     <div class="make-post-container">
-        <h2 class="post-title">What's on your mind?</h2>
+        <h2 class="post-title">Make a Post</h2>
+        <textarea class="job-description-input" rows="6" placeholder="Enter job description..."></textarea>
+        <input type="text" class="cost-input" placeholder="Enter cost (optional)">
         <select class="category-dropdown">
             <option value="creatives">Creatives</option>
             <option value="other_services">Other Services</option>
             <option value="travel">Travel</option>
             <option value="tutoring">Tutoring</option>
         </select>
-        <textarea class="post-input" rows="6" placeholder="Write your post here..."></textarea>
         <button class="post-button" onclick="submitPost()">Post</button>
     </div>
 
