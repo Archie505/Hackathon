@@ -19,4 +19,3 @@ if you want to run the code you have to run
 
     python -m flask run 
     then click the link 
-https://devpost.com/software/642861/joins/AU249xSD-Jb8kU2w2npwow
