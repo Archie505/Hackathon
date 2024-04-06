@@ -1,12 +1,6 @@
 # Hackathon
  2024
 
- marc de jesus is handsome
-
-TO DO:
-    - make logo work,  index.html line 63
-
-
 commands you may need
 
 if youre getting the running scripts is disabled run this first
