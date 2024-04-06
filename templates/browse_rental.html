@@ -1,68 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Browse Rental Posts{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browse Posts - Coterie</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: maroon;
-    }
-    .container {
-      padding: 20px;
-    }
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 100px;
-    }
-    .posts-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-    .post {
-      background-color: #FF9900;
-      margin: 10px;
-      padding: 20px;
-      border-radius: 10px;
-      width: 80%;
-      color: white;
-    }
-    .signin {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #FF9900;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .signin:hover {
-      background-color: yellow;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Rental Posts</title>
+    <style>
+        /* Adjustments to match the format of the rest of the webpage */
+        .posts-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .post {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        .post-cost {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-
-    <img class="logo" src="{{ url_for('static', filename='your_logo.png') }}" alt="Your Logo">
-
-  <button class="signin">Sign In</button>
-
-  <div class="container">
-    <h1 style="color: white;">Browse Posts</h1>
     <div class="posts-container">
-      <div class="post">I have an airfryer.</div>
-      <div class="post">I have a calculator.</div>
+        <div class="post">
+            <div class="post-content">Beach house rental with ocean view</div>
+            <div class="post-cost">$200/night</div>
+        </div>
+        <div class="post">
+            <div class="post-content">Mountain cabin retreat</div>
+            <div class="post-cost">$150/night</div>
+        </div>
+        <div class="post">
+            <div class="post-content">Luxury apartment in the heart of the city</div>
+            <div class="post-cost">$300/night</div>
+        </div>
+        <div class="post">
+            <div class="post-content">Cozy countryside cottage</div>
+            <div class="post-cost">$100/night</div>
+        </div>
     </div>
-  </div>
-
 </body>
 </html>
+{% endblock %}
