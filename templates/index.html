@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +68,6 @@
 
   <img class="logo" src="{{ url_for('static', filename='your_logo.png') }}" alt="Your Logo">
 
-  <button class="signin">Sign In</button>
 
   <div class="container">
     <div class="buttons-container">
@@ -74,3 +78,4 @@
 
 </body>
 </html>
+{% endblock %}
